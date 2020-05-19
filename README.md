@@ -31,7 +31,7 @@ Usage:
 NotifySetup(string uniqueIdentifier, string displayName, table default)
 ```
 #### Info:
-- The NotifySetup function allows you to define a unique identifyer, show what the client sees the identifyer as, as well as defining the defaults for the notification.
+- The NotifySetup function allows you to define a unique identifyer, show what the client sees the identifier as, as well as defining the defaults for the notification.
 - If `displayName` is not given the `uniqueIdentifier` is used.
 - You can only create a `uniqueIdentifier` that has not been created before. Don't worry, you can still send messages in any lua file even if you didn't use `NotifySetup()` in it.
 
