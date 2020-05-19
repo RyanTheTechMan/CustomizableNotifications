@@ -14,8 +14,10 @@
 -   Copy/Paste Examples
 
 ## In-Game Screen Shots (These are not final. Things could change.)
+###### Context Menu
 ![Context Menu](https://i.imgur.com/orgGgvZ.png)
 
+###### Client Customization Menu
 ![Menu](https://i.imgur.com/emf0lhH.png)
 
 ## Install
