@@ -18,7 +18,7 @@
 ![Context Menu](https://i.imgur.com/orgGgvZ.png)
 
 ###### Client Customization Menu
-![Menu](https://i.imgur.com/emf0lhH.png)
+![Menu](https://imgur.com/uwJKkGa.png)
 
 ## Install
 Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your servers `/garrysmod/addons/` folder.
