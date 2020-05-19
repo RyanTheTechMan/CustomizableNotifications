@@ -9,7 +9,7 @@
 ## Features
 
 -   Simple Setup for Server Owners
--   Simple Global Varibles
+-   Simple Global Variables
 -   Beautiful Client Interface
 -   Copy/Paste Examples
 
