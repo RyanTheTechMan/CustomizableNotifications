@@ -14,9 +14,9 @@
 -   Copy/Paste Examples
 
 ## In-Game Screen Shots (These are not final. Things could change.)
-![Context Menu](https://i.gyazo.com/0942831afa869b4fb79987f6acbf3d8c.png)
+![Context Menu](https://i.imgur.com/orgGgvZ.png)
 
-![Menu](https://i.imgur.com/vKxQNbT.png)
+![Menu](https://i.imgur.com/emf0lhH.png)
 
 ## Install
 Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your Garry's Mod
