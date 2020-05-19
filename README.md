@@ -21,7 +21,7 @@
 ![Menu](https://i.imgur.com/emf0lhH.png)
 
 ## Install
-Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your Garry's Mod
+Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your servers `/garrysmod/addons/` folder.
 
 ## Usage (Developer Info)
 ### Basic Overview
