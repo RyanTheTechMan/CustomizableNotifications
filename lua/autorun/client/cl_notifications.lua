@@ -137,7 +137,26 @@ local function menuCustomizableNotifications()
     local selectColor = 120
 
     local esizeX, esizeY = examples:GetSize()
-    
+
+    local example3 = examples:Add("DPanel")
+    example3:SetPos(examOffset, 0)
+    example3:SetSize(offsetBoost - 20, esizeY)
+    example3.Paint = function(s,w,h)
+        draw.RoundedBox(10, 0, 25, w, h-30, Color(example3.Hovered and selectColor or grayScaleIntensity,grayScaleIntensity,grayScaleIntensity, 235))
+        draw.RoundedBox(0, 5, h-25, 40, 6, Color(81, 156, 224, 235))
+        draw.SimpleText("Chat Message (CM)", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+    end
+    local example3B = example3:Add("DButton")
+    example3B:SetPos(0, 25)
+    example3B:SetSize(150,96)
+    example3B:SetText("")
+    function example3B:Paint(s,w,h) self:GetParent().Hovered = self:IsHovered() end
+    example3B.DoClick = function()
+        chat.AddText(Color(255,0,0), "This is what a ", Color(0,255, 100), "chat message", Color(255,0,0), " looks like.")
+    end
+
+    examOffset = examOffset + offsetBoost
+
     local example1 = examples:Add("DPanel")
     example1:SetPos(examOffset,0)
     example1:SetSize(offsetBoost - 20, esizeY)
@@ -187,25 +206,6 @@ local function menuCustomizableNotifications()
         notification.AddLegacy("This is what a notification looks like!", NOTIFY_GENERIC, 5)
         surface.PlaySound("buttons/button15.wav")
     end
-
-    examOffset = examOffset + offsetBoost
-
-    local example3 = examples:Add("DPanel")
-    example3:SetPos(examOffset, 0)
-    example3:SetSize(offsetBoost - 20, esizeY)
-    example3.Paint = function(s,w,h)
-        draw.RoundedBox(10, 0, 25, w, h-30, Color(example3.Hovered and selectColor or grayScaleIntensity,grayScaleIntensity,grayScaleIntensity, 235))
-        draw.RoundedBox(0, 5, h-25, 40, 6, Color(81, 156, 224, 235))
-        draw.SimpleText("Chat Message (CM)", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-    end
-    local example3B = example3:Add("DButton")
-    example3B:SetPos(0, 25)
-    example3B:SetSize(150,96)
-    example3B:SetText("")
-    function example3B:Paint(s,w,h) self:GetParent().Hovered = self:IsHovered() end
-    example3B.DoClick = function()
-        chat.AddText(Color(255,0,0), "This is what a ", Color(0,255, 100), "chat message", Color(255,0,0), " looks like.")
-    end
     
     examOffset = examOffset + offsetBoost
 
@@ -226,32 +226,47 @@ local function menuCustomizableNotifications()
     --function example4B:UpdateColours(skin) return {} end
     example4B.DoClick = function() end]]
 
-    local TT = frame:Add("DPanel")
-    TT:SetPos(sizeX - 350, esizeY + 50)
-    TT:SetSize(40,30)
-    TT.Paint = function(s,w,h)
-        draw.SimpleText("TT", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-    end
-    local N = frame:Add("DPanel")
-    N:SetPos(sizeX - 350 + 50, esizeY + 50)
-    N:SetSize(40,30)
-    N.Paint = function(s,w,h)
-        draw.SimpleText("N", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-    end
+    local collumOffset = 0
+    local collumOffsetAmount = 50
+
     local CM = frame:Add("DPanel")
-    CM:SetPos(sizeX - 350 + 50 + 50, esizeY + 50)
+    CM:SetPos(sizeX - 350 + collumOffset, esizeY + 50)
     CM:SetSize(40,30)
     CM.Paint = function(s,w,h)
         draw.SimpleText("CM", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
     end
+
+    collumOffset = collumOffset + collumOffsetAmount
+
+    local TT = frame:Add("DPanel")
+    TT:SetPos(sizeX - 350 + collumOffset, esizeY + 50)
+    TT:SetSize(40,30)
+    TT.Paint = function(s,w,h)
+        draw.SimpleText("TT", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+    end
+
+    collumOffset = collumOffset + collumOffsetAmount
+
+    local N = frame:Add("DPanel")
+    N:SetPos(sizeX - 350 + collumOffset, esizeY + 50)
+    N:SetSize(40,30)
+    N.Paint = function(s,w,h)
+        draw.SimpleText("N", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+    end
+
+    collumOffset = collumOffset + collumOffsetAmount
+
     local A = frame:Add("DPanel")
-    A:SetPos(sizeX - 350 + 50 + 50 + 50, esizeY + 50)
+    A:SetPos(sizeX - 350 + collumOffset, esizeY + 50)
     A:SetSize(40,30)
     A.Paint = function(s,w,h)
         draw.SimpleText("A", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
     end
+
+    collumOffset = collumOffset + collumOffsetAmount
+
     local D = frame:Add("DPanel")
-    D:SetPos(sizeX - 350 + 50 + 50 + 50 + 50 + 50 - 15, esizeY + 50)
+    D:SetPos(sizeX - 350 + collumOffset + collumOffsetAmount - 15, esizeY + 50)
     D:SetSize(70,30)
     D.Paint = function(s,w,h)
         draw.SimpleText("Disabled", "CustomizableNotifications:ExampleFont", w/2, 12, Color(255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
@@ -357,9 +372,10 @@ local function menuCustomizableNotifications()
             return buttonBacking
         end
         itemSelection[k] = {}
+        
+        table.insert(itemSelection[k], createButton(NOTIFY_CHAT))
         table.insert(itemSelection[k], createButton(NOTIFY_TOPTEXT))
         table.insert(itemSelection[k], createButton(NOTIFY_NOTIFICATION))
-        table.insert(itemSelection[k], createButton(NOTIFY_CHAT))
 
         local authorDefined = (v.xPos == -0.5 and v.yPos == -0.08 and v.xTextAlign == TEXT_ALIGN_CENTER and v.yTextAlign == TEXT_ALIGN_CENTER and v.messageFont == "Trebuchet24")
 
