@@ -13,8 +13,10 @@
 -   Beautiful Client Interface
 -   Copy/Paste Examples
 
-## In-Game Screen Shots
---To Be Added
+## In-Game Screen Shots (These are not final. Things could change.)
+![Context Menu](https://i.gyazo.com/0942831afa869b4fb79987f6acbf3d8c.png)
+
+![Menu](https://i.gyazo.com/931a6af5f36294780126613b2aad6b08.png)
 
 ## Install
 Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your Garry's Mod
