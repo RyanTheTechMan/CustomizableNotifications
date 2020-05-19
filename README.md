@@ -29,11 +29,9 @@ Usage:
 NotifySetup(string uniqueIdentifier, string displayName, table default)
 ```
 #### Info:
-The NotifySetup function allows you to define a unique identifyer, show what the client sees the identifyer as, as well as defining the defaults for the notification.
-
-If `displayName` is not given the `uniqueIdentifier` is used.
-
-You can only create a `uniqueIdentifier` that has not been created before. Don't worry, you can still send messages in any lua file even if you didn't use `NotifySetup()` in it.
+- The NotifySetup function allows you to define a unique identifyer, show what the client sees the identifyer as, as well as defining the defaults for the notification.
+- If `displayName` is not given the `uniqueIdentifier` is used.
+- You can only create a `uniqueIdentifier` that has not been created before. Don't worry, you can still send messages in any lua file even if you didn't use `NotifySetup()` in it.
 
 #### How To:
 In order to set up the notifications paste the following code at the top of a lua file within `<addon>/autorun/` or `<addon>/autorun/server/`:
@@ -108,10 +106,18 @@ NotifyPlayer(Player ply, string uniqueIdentifier, table/string message, <Color> 
 The NotifyPlayer function is what you use to send a message to the player.
 
 #### Info:
-If the player is `nil` it will send the message to all players.
+- If the player is `nil` it will send the message to all players.
+- The `uniqueIdentifier` must have been created BEFORE sending the message.
+- If a table is used, you are able to provide colors like [chat.AddText(vararg arguments)](https://wiki.facepunch.com/gmod/chat.AddText). If a string is used then the text will be displayed as white.
+- If a color is entered, the top text will be displayed using the given color. Otherwise it will be displayed as white.
 
-#### How To:
--- To Be Added
+### Examples
+```lua
+NotifyPlayer(nil, "CoolAddon:EpicTest", "Hello All!")
+NotifyPlayer(ply, "shield", {Color(0,255,0), "You are now ", Color(0,0,255), "shielded"}, Color(0,0,255))
+NotifyPlayer(ply, "shield", {Color(255,255,0), "You are now ", Color(255,0,0), "unshielded"}, Color(255,0,0))
+NotifyPlayer(ply, "everything", {Color(255,0,0), "R", Color(0,255,0), "G", Color(0,0,255), "B", Color(255,255,255), "!"})
+```
 
 ## Why is it free?
 I feel since this is a developer tool, it shouldn't be put up for money. This is a tool everyone can use for the greater good.
