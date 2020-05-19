@@ -2,6 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/release/RyanTheTechMan/CustomizableNotifications.svg?style=flat-square)](https://github.com/RyanTheTechMan/CustomizableNotifications/releases)
 [![Software License](https://img.shields.io/badge/license-CC--BY--SA--4.0-brightgreen.svg?style=flat-square)](https://github.com/RyanTheTechMan/CustomizableNotifications/blob/master/LICENSE.md)
+![GitHub repo size](https://img.shields.io/github/repo-size/RyanTheTechMan/CustomizableNotifications?label=Size&style=flat-square)
 
 **CustomizableNotifications** is a Garry's Mod Addon that allows you to let the CLIENTS take control of how notifications appear.
 
