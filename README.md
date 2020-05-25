@@ -20,6 +20,8 @@
 ###### Client Customization Menu
 ![Menu](https://imgur.com/166ny7C.png)
 
+[![Image from Gyazo](https://i.gyazo.com/6ef5acf9c1e8be3560512df725fe824b.gif)](https://gyazo.com/6ef5acf9c1e8be3560512df725fe824b)
+
 ## Install
 Download the latest release by [clicking here](https://github.com/RyanTheTechMan/CustomizableNotifications/releases/latest/download/customizable_notifications.zip) then extracting the zip into your servers `/garrysmod/addons/` folder.
 
@@ -87,9 +89,17 @@ messageFont [string] (NOTIFY_TOPTEXT)
 	Default: "Trebuchet24"
 	The font to use for displaying the text.
 
-setFirst [bool] (NOTIFY_TOPTEXT) (NOTIFY_TOPTEXT)
+setFirst [bool] (NOTIFY_TOPTEXT)
 	Default: false
 	Forces the text to apprear infront of all of the other items in the list.
+	
+sound [string]
+	Default: "buttons/button15.wav"
+	This sound is played when the notification is recieved
+	
+soundEnabled [bool]
+	Default: true
+	Enables the playing of the sound. This is not required to be set if sound has been set. If you want the default sound, enable this with out setting the sound.
 ```
 
 **Keep in mind, even if you didn't pick `NOTIFY_TOPTEXT` you can still set defaults since a client may decide to use Top Text on their side.**
@@ -99,7 +109,7 @@ setFirst [bool] (NOTIFY_TOPTEXT) (NOTIFY_TOPTEXT)
 NotifySetup("CoolAddon:EpicTest", "Some Cool Thing", {messageType = NOTIFY_CHAT})
 NotifySetup("shield", "Shield", {messageType = NOTIFY_TOPTEXT, yPos = -0.5, holdTime = 12})
 NotifySetup("test12444", "Just A Test", {messageType = NOTIFY_NOTIFICATION, xPos = 10, xTextAlign = TEXT_ALIGN_LEFT, messageFont = Trebuchet18, setFirst = true, holdTime = 5})
-NotifySetup("everything", "Default", {messageType = NOTIFY_CHAT, holdTime = 10, notificationType = NOTIFY_GENERIC, fadeTime = 0.25, xPos = -0.5, yPos = -0.08, xTextAlign = TEXT_ALIGN_CENTER, yTextAlign = TEXT_ALIGN_CENTER, messageFont = "Trebuchet24", setFirst = false})
+NotifySetup("everything", "Default", {messageType = NOTIFY_CHAT, holdTime = 10, notificationType = NOTIFY_GENERIC, fadeTime = 0.25, xPos = -0.5, yPos = -0.08, xTextAlign = TEXT_ALIGN_CENTER, yTextAlign = TEXT_ALIGN_CENTER, messageFont = "Trebuchet24", setFirst = false, sound = "buttons/button15.wav", soundEnabled = false})
 ```
 
 ### Using NotifyPlayer()
