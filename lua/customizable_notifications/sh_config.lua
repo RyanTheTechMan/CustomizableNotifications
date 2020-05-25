@@ -1,7 +1,9 @@
+AddCSLuaFile()
 if CLIENT then 
     CustomizableNotifications = CustomizableNotifications or {}
     CustomizableNotifications.Config = CustomizableNotifications.Config or {}
 	CustomizableNotifications.Config.ShowContextMenu = true
+    CustomizableNotifications.Config.QuickShiftKeys = {KEY_LSHIFT, KEY_RSHIFT}
 end
 
 if SERVER then
@@ -14,4 +16,4 @@ if SERVER then
     CustomizableNotifications.Config.KeyBind = {}
 end
 
-CustomizableNotifications.DebugMode = false -- Enableing this will print messages to the client and server while things are happening.
+CustomizableNotifications.DebugMode = true -- Enableing this will print messages to the client and server while things are happening.
