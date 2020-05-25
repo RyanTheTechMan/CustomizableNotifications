@@ -16,4 +16,4 @@ if SERVER then
     CustomizableNotifications.Config.KeyBind = {}
 end
 
-CustomizableNotifications.DebugMode = true -- Enableing this will print messages to the client and server while things are happening.
+CustomizableNotifications.DebugMode = false -- Enableing this will print messages to the client and server while things are happening.
