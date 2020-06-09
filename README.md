@@ -42,16 +42,13 @@ NotifySetup(string uniqueIdentifier, string displayName, table default)
 #### How To:
 In order to set up the notifications paste the following code at the top of a lua file within `<addon>/autorun/` or `<addon>/autorun/server/`:
 ```lua
-if SERVER then
-  local notifySetupA
-  local notifySetupB = function()
-    if (not NotifySetup) then timer.Simple(1, notifySetupA()) else
-      --TODO: Add NotifySetup() here 
+local notifySetup = "NotifySetup:" .. math.random(-1^10, 1^10)
+timer.Create(notifySetup,1,0,function()
+	if (NotifySetup) then
+      --TODO: Add NotifySetup() here
+	  timer.Remove(notifySetup)
     end
-  end
-  notifySetupA = function() notifySetupB() end
-  notifySetupA()
-end
+end)
 ```
 
 The default table **MUST** include a messageType. Message types include `NOTIFY_TOPTEXT`, `NOTIFY_NOTIFICATION`, & `NOTIFY_CHAT`
