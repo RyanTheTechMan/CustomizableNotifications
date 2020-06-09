@@ -12,7 +12,7 @@ if SERVER then
 
     //Open Menu Options
     CustomizableNotifications.Config.chatCommand = {"customizablenotifications", "cnotify", "customnotify"}
-    CustomizableNotifications.Config.chatCommandPrefixes = {"!", "/"}
+    CustomizableNotifications.Config.chatCommandPrefixes = {}
     CustomizableNotifications.Config.KeyBind = {}
 end
 
