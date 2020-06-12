@@ -42,7 +42,7 @@ NotifySetup(string uniqueIdentifier, string displayName, table default)
 #### How To:
 In order to set up the notifications paste the following code at the top of a lua file within `<addon>/autorun/` or `<addon>/autorun/server/`:
 ```lua
-local notifySetup = "NotifySetup:" .. math.random(-1^10, 1^10)
+local notifySetup = "NotifySetup:" .. math.random(-10^9, 10^9)
 timer.Create(notifySetup,1,0,function()
 	if (NotifySetup) then
       --TODO: Add NotifySetup() here
